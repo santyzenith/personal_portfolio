@@ -24,7 +24,7 @@ export function AppSidebar() {
   return (
     isMobile && (
       <>
-        <SidebarTrigger />
+        <SidebarTrigger className="absolute" />
         <Sidebar>
           <SidebarHeader>
             Menu

@@ -16,7 +16,7 @@ export function NavMenu() {
     const { isMobile } = useSidebar();
     return (
         !isMobile && (
-        <div className="flex w-[95%] justify-end bg-white fixed z-20">
+        <div className="flex w-full p-3 justify-end bg-white fixed z-20">
         {/* <div className="self-end"> */}
             <NavigationMenu>
                 <NavigationMenuList>
