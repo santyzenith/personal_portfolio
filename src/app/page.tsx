@@ -10,13 +10,13 @@ export default function Home() {
       <AppSidebar />
       <NavMenu />
       <div className="flex flex-col mx-5 md:mx-20">
-        <div className="h-screen border-2 border-amber-700">
+        <div id="home" className="h-screen">
           <HomeContent />
         </div>
-        <div className="border-2 border-amber-300 justify-center">
+        <div id="experiences" className="justify-center">
           <Timeline />
         </div>
-        <div className="border-2 border-amber-950 justify-center">
+        <div id="projects" className="justify-center">
           <CarouselProjects />
         </div>
       </div>
