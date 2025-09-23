@@ -18,7 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
-  username: z.string().min(2).max(50),
+  name: z.string().min(2).max(50),
   email: z.string().email(),
   message: z.string().optional(),
 });
@@ -28,7 +28,7 @@ export function Contact() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
+      name: "",
       email: "",
       message: "",
     },
@@ -50,11 +50,11 @@ export function Contact() {
         return;
       }
 
-      alert("✅ Mensaje enviado con éxito!");
+      alert("¡Thanks!");
       form.reset();
     } catch (error) {
       console.error(error);
-      alert("❌ Error inesperado al enviar el formulario.");
+      alert("Server error");
     }
   }
 
@@ -71,7 +71,7 @@ export function Contact() {
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
               <FormField
                 control={form.control}
-                name="username"
+                name="name"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Your name</FormLabel>
@@ -109,7 +109,7 @@ export function Contact() {
                 )}
               />
               <div className="w-full flex justify-center">
-                <Button type="submit">Get in touch</Button>
+                <Button type="submit" className="cursor-pointer">Get in touch</Button>
               </div>
             </form>
           </Form>

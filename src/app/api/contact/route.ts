@@ -10,12 +10,12 @@ const supabase = createClient(
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { username, email, message } = body;
+    const { name, email, message } = body;
 
     // Insertar en la tabla "contacts"
     const { data, error } = await supabase
       .from("contacts")
-      .insert([{ username, email, message }]);
+      .insert([{ name, email, message }]);
 
     if (error) {
       console.error("Supabase error:", error.message);
