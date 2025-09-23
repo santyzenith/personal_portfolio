@@ -35,10 +35,27 @@ export function Contact() {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    // console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        alert("❌ Error: " + data.error);
+        return;
+      }
+
+      alert("✅ Mensaje enviado con éxito!");
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      alert("❌ Error inesperado al enviar el formulario.");
+    }
   }
 
   return (
@@ -92,9 +109,7 @@ export function Contact() {
                 )}
               />
               <div className="w-full flex justify-center">
-                <Button type="submit">
-                  Get in touch
-                </Button>
+                <Button type="submit">Get in touch</Button>
               </div>
             </form>
           </Form>
