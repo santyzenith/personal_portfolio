@@ -75,8 +75,8 @@ export function CarouselProjects() {
                   </CardTitle>
                   <CardDescription>
                     Developed the inaugural fine-tuned LLMs specialized in
-                    Ecuador's Organic Law on Personal Data Protection (LOPD)
-                    using Python's Unsloth library. Includes benchmarks for
+                    Ecuador&apos;s Organic Law on Personal Data Protection (LOPD)
+                    using Python&apos;s Unsloth library. Includes benchmarks for
                     evaluating LLMs on LOPD compliance. Dataset used for
                     training is publicly available.
                   </CardDescription>
@@ -105,12 +105,12 @@ export function CarouselProjects() {
                   <CardDescription>
                     A fine-tuned BARTO (bart-base-spanish) model for handling
                     transcribed emergency calls. Supports tasks like
-                    summarization ("Resume la emergencia: "), keyword extraction
-                    ("Extrae las palabras clave de la emergencia: "),
-                    single-word representation ("La palabra que mejor representa
-                    la emergencia es: "), and classification ("Clasifica la
+                    summarization (&quot;Resume la emergencia: &quot;), keyword extraction
+                    (&quot;Extrae las palabras clave de la emergencia: &quot;),
+                    single-word representation (&quot;La palabra que mejor representa
+                    la emergencia es: &quot;), and classification (&quot;Clasifica la
                     emergencia en [CLAVE ROJA, CLAVE NARANJA, CLAVE AMARILLA,
-                    CLAVE VERDE]: ").
+                    CLAVE VERDE]: &quot;).
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>
@@ -165,7 +165,7 @@ export function CarouselProjects() {
                   <CardDescription>
                     A fine-tuned bart-base-spanish model specialized in
                     extracting keywords or context from transcribed emergency
-                    calls. Use the prefix "summarize: " before input text to
+                    calls. Use the prefix &quot;summarize: &quot; before input text to
                     generate responses.
                   </CardDescription>
                 </CardHeader>

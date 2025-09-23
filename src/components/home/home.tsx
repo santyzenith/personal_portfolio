@@ -9,7 +9,7 @@ export function HomeContent() {
         I am an AI engineer. I build things with Artificial Intelligence, focusing
         on Large Language Models (LLMs).<br></br> I also craft beautiful, fast, and
         modern websites.<br></br>
-        !Like the one you’re visiting now!
+        !Like the one you&apos;re visiting now!
       </span>
       <Button
         variant="outline"
