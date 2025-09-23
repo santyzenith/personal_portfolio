@@ -4,7 +4,7 @@ import { Link2 } from "lucide-react";
 import {
   Card,
   // CardAction,
-  CardContent,
+  // CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -69,7 +69,7 @@ export function CarouselProjects() {
                       target="_blank"
                       className="cursor-pointer hover:underline"
                     >
-                      First Legal LLMs for Ecuador's Data Protection Law
+                      First Legal LLMs for Ecuador&apos;s Data Protection Law
                       <Link2 />
                     </Link>
                   </CardTitle>

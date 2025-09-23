@@ -23,8 +23,13 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ success: true, data });
-  } catch (err: any) {
-    console.error("Server error:", err.message);
-    return NextResponse.json({ error: err.message }, { status: 500 });
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      console.error("Server error:", err.message);
+      return NextResponse.json({ error: err.message }, { status: 500 });
+    }
+
+    console.error("Unexpected error:", err);
+    return NextResponse.json({ error: "Unknown error" }, { status: 500 });
   }
 }
