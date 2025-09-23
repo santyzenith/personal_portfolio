@@ -11,7 +11,7 @@ export default function Home() {
     <main className="overflow-x-hidden">
       <AppSidebar />
       <NavMenu />
-      <div className="flex flex-col mx-10 md:mx-20">
+      <div className="flex flex-col mx-5 md:mx-20">
         <div id="home" className="h-screen">
           <HomeContent />
         </div>

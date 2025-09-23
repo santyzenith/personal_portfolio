@@ -21,7 +21,7 @@ import Link from "next/link";
 
 export function CarouselProjects() {
   return (
-    <div className="flex flex-col h-full items-center justify-center">
+    <div className="flex flex-col h-full px-5 items-center justify-center">
       <p className="mb-10 text-xl font-bold">Stuff that I have built</p>
       <Carousel className="w-full">
         <CarouselContent className="-ml-1">

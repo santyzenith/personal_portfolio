@@ -129,16 +129,16 @@ export function Contact() {
             </span>
           </div>
           <div className="flex w-full md:w-1/5 flex-wrap md:flex-nowrap items-center justify-center space-x-4">
-            <Link href="#" target="_blank">
+            <Link href="www.linkedin.com/in/santiago-garcia-montero" target="_blank">
               <Linkedin className="h-5 w-5" />
             </Link>
-            <Link href="#" target="_blank">
+            <Link href="https://github.com/santyzenith" target="_blank">
               <Github className="h-5 w-5" />
             </Link>
-            <Link href="#" target="_blank">
+            <Link href="https://www.facebook.com/Garcia.Patricio.S" target="_blank">
               <Facebook className="h-5 w-5" />
             </Link>
-            <Link href="#" target="_blank">
+            <Link href="https://www.instagram.com/santyg20" target="_blank">
               <Instagram className="h-5 w-5" />
             </Link>
           </div>
