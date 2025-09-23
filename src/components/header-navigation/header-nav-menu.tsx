@@ -37,12 +37,12 @@ export function NavMenu() {
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                            <Link href="#">Publications</Link>
+                            <Link href="#publications">Publications</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                            <Link href="#">Contact</Link>
+                            <Link href="#contact">Contact</Link>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
                 </NavigationMenuList>

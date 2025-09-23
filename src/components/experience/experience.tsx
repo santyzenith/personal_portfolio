@@ -43,7 +43,8 @@ const experiences = [
 export default function Timeline() {
     return (
         // <div className="max-w-(--breakpoint-sm) mx-auto py-12 md:py-20 px-6">
-        <div className="py-5 break-all md:break-normal">
+        <div className="break-all md:break-normal">
+            <p className="pb-5 text-xl font-bold">Where I have been working</p>
             <div className="relative ml-2">
                 {/* Timeline line */}
                 <div className="absolute left-0 top-4 bottom-0 border-l-2" />

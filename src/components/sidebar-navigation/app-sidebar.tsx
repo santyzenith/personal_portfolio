@@ -24,7 +24,9 @@ export function AppSidebar() {
   return (
     isMobile && (
       <>
-        <SidebarTrigger className="absolute" />
+        <div className="flex w-full fixed justify-start">
+          <SidebarTrigger className="cursor-pointer ml-1" />
+        </div>
         <Sidebar>
           <SidebarHeader>
             Menu
@@ -35,35 +37,35 @@ export function AppSidebar() {
                 <SidebarMenu>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <a href="#">
+                      <a href="#home">
                         <span>Home</span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <a href="#">
+                      <a href="#experiences">
                         <span>Experience</span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <a href="#">
+                      <a href="#projects">
                         <span>Projects</span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <a href="#">
+                      <a href="#publications">
                         <span>Publications</span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
-                      <a href="#">
+                      <a href="#contact">
                         <span>Contact</span>
                       </a>
                     </SidebarMenuButton>

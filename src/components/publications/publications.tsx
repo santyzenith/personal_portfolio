@@ -1,0 +1,64 @@
+"use client";
+import * as React from "react";
+
+export function Publications() {
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    const container = document.getElementById("bibbase-container");
+    if (!container) return;
+
+    const iframe = document.createElement("iframe");
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+
+    // Definición del contenido del iframe usando srcdoc
+    iframe.srcdoc = `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="UTF-8">
+        </head>
+        <body>
+          <script src="https://bibbase.org/show?bib=https://bibbase.org/f/d67CiXKgBSj7NmXv5/santy_garcia_papers.bib&jsonp=1"></script>
+          <script>
+            // Esperamos a que el contenido de BibBase se cargue
+            window.onload = function() {
+              // Seleccionamos todos los enlaces generados por BibBase
+              const links = document.querySelectorAll('a');
+              links.forEach(link => {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer'); // Seguridad adicional
+              });
+            };
+          </script>
+        </body>
+      </html>
+    `;
+
+    // Cuando el iframe termina de cargar, ocultamos el mensaje
+    iframe.onload = () => setLoading(false);
+
+    container.appendChild(iframe);
+
+    // Limpieza al desmontar el componente
+    return () => {
+      container.innerHTML = "";
+    };
+  }, []);
+
+  return (
+    <div className="flex flex-col size-full items-center justify-center">
+      <p className="text-xl font-bold">My Published Work</p>
+      <div className="relative flex justify-center w-full h-4/6">
+        {loading && (
+          <span className="text-base pt-5 w-full">
+            Please wait, publications will load shortly...
+          </span>
+        )}
+        <div id="bibbase-container" className="flex justify-center w-full h-full" />
+      </div>
+    </div>
+  );
+}
