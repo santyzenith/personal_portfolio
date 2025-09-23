@@ -24,7 +24,7 @@ export function AppSidebar() {
   return (
     isMobile && (
       <>
-        <div className="flex w-full fixed justify-start">
+        <div className="flex w-full fixed justify-start z-10">
           <SidebarTrigger className="cursor-pointer ml-1" />
         </div>
         <Sidebar>
@@ -38,35 +38,35 @@ export function AppSidebar() {
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
                       <a href="#home">
-                        <span>Home</span>
+                        <span className="text-base font-bold">Home</span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
                       <a href="#experiences">
-                        <span>Experience</span>
+                        <span className="text-base font-bold">Experience</span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
                       <a href="#projects">
-                        <span>Projects</span>
+                        <span className="text-base font-bold">Projects</span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
                       <a href="#publications">
-                        <span>Publications</span>
+                        <span className="text-base font-bold">Publications</span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
                     <SidebarMenuButton asChild>
                       <a href="#contact">
-                        <span>Contact</span>
+                        <span className="text-base font-bold">Contact</span>
                       </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>

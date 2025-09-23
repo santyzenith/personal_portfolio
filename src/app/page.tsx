@@ -15,7 +15,7 @@ export default function Home() {
         <div id="home" className="h-screen">
           <HomeContent />
         </div>
-        <div id="experiences" className="min-h-screen scroll-mt-5 md:scroll-mt-15">
+        <div id="experiences" className="min-h-screen scroll-mt-15">
           <Timeline />
         </div>
         <div id="projects" className="h-screen">
